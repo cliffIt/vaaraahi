@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Vaaraahi | Biryani's and Beyond</title>
+<meta name="description" content="Explore the full Vaaraahi menu — dum biryanis, Andhra curries, tandoori grill, Indo-Chinese, kothu parotta, desserts and more. Vegetarian and non-vegetarian.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Marcellus&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23111111'/%3E%3Ctext x='20' y='28' text-anchor='middle' fill='%23C8A15A' font-family='Georgia' font-size='24'%3EV%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand wordmark" href="index.html" aria-label="Vaaraahi home">
+      <svg class="tri" viewBox="0 0 40 36" aria-hidden="true"><g fill="#A51C30" transform="translate(20,20)">
+        <path d="M0,-16 C6,-9 6,-2 0,4 C-6,-2 -6,-9 0,-16Z"/>
+        <path d="M-7,-4 C1,-6 6,-1 7,6 C-1,8 -6,3 -7,-4Z" transform="rotate(-52)"/>
+        <path d="M7,-4 C-1,-6 -6,-1 -7,6 C1,8 6,3 7,-4Z" transform="rotate(52)"/>
+      </g></svg>
+      <span class="name">Vaaraahi</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn order-btn" href="tel:+14698504763" title="Call to place an order">Call to Order</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">&#9776;</button>
+  </div>
+</header>
+
+<main>
+  <section class="menu-hero">
+    <div class="wrap">
+      <p class="eyebrow">The full spread</p>
+      <h2 style="font-family:var(--font-display);color:var(--gold);letter-spacing:0.14em;text-transform:uppercase;font-size:clamp(1.6rem,4vw,2.3rem)">Our Menu</h2>
+      <p class="lede" style="margin:12px auto 0;text-align:center">Seventeen sections, one kitchen. Search a dish or jump straight to a category.</p>
+      <div class="gold-rule" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="menu-controls">
+    <div class="wrap controls-row">
+      <div class="search-box">
+        <span class="icon" aria-hidden="true">&#9906;</span>
+        <input type="search" id="menu-search" placeholder="Search dishes&hellip; e.g. gongura" aria-label="Search dishes">
+      </div>
+      <div class="view-toggle" role="group" aria-label="Menu layout">
+        <span class="label">View</span>
+        <button class="cat-pill" data-view="grid" aria-pressed="false">Cards</button>
+        <button class="cat-pill active" data-view="list" aria-pressed="true">List</button>
+      </div>
+      <div class="cat-scroller" id="cat-pills" role="group" aria-label="Category filter"></div>
+    </div>
+  </div>
+
+  <div id="menu-root"></div>
+
+  <div class="no-results wrap" id="no-results" style="display:none">
+    <div class="name">No dishes match your search</div>
+    <p>Try a shorter word — "biryani", "paneer", "shrimp" — or pick All above.</p>
+  </div>
+
+  <p class="menu-note wrap">
+    Prices are subject to change. Family Pack biryanis are 58&nbsp;oz and include a chef's appetizer.
+    Green mark = vegetarian &nbsp;&middot;&nbsp; red mark = non-vegetarian.
+    Please tell your server about any allergies — most dishes can be adjusted for spice.
+  </p>
+</main>
+
+<div class="lattice" aria-hidden="true" style="margin-top:56px"></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="wordmark">
+          <span class="name">Vaaraahi</span>
+          <svg class="tri" viewBox="0 0 40 36" aria-hidden="true" width="26"><g fill="#A51C30" transform="translate(20,20)">
+            <path d="M0,-16 C6,-9 6,-2 0,4 C-6,-2 -6,-9 0,-16Z"/>
+            <path d="M-7,-4 C1,-6 6,-1 7,6 C-1,8 -6,3 -7,-4Z" transform="rotate(-52)"/>
+            <path d="M7,-4 C-1,-6 -6,-1 -7,6 C1,8 6,3 7,-4Z" transform="rotate(52)"/>
+          </g></svg>
+          <div class="tag">Biryani's and Beyond</div>
+        </div>
+        <p class="tagline-sm">Sealed with tradition. Served with heart.</p>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=2550+Preston+Rd,+Frisco,+TX+75034" target="_blank" rel="noopener">2550 Preston Rd, Frisco, TX 75034</a></li>
+          <li><a href="tel:+14698504763">+1 (469) 850-4763</a></li>
+          <li><a href="mailto:info@vaaraahikitchen.com">info@vaaraahikitchen.com</a></li>
+          <li><span>Hours: to be added</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; 2026 Vaaraahi. All rights reserved.</span>
+      <span>vaaraahikitchen.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/images.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+# Render Blueprint — Vaaraahi (vaaraahikitchen.com)
+# A plain static site: no build step, no dependencies. Render just serves the files.
+services:
+  - type: web
+    runtime: static
+    name: vaaraahi
+    # Nothing to compile — the site is hand-written HTML/CSS/JS.
+    buildCommand: ""
+    # Publish the repo root, where index.html lives.
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
+
+    # Pretty URLs: vaaraahikitchen.com/menu works as well as /menu.html
+    routes:
+      - type: rewrite
+        source: /menu
+        destination: /menu.html
+      - type: rewrite
+        source: /about
+        destination: /about.html
+      - type: rewrite
+        source: /catering
+        destination: /catering.html
+      - type: rewrite
+        source: /contact
+        destination: /contact.html
+
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      # Brand photos and dish images rarely change — cache them hard.
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      # CSS/JS change when the menu changes — cache briefly, revalidate.
+      - path: /css/*
+        name: Cache-Control
+        value: public, max-age=3600, must-revalidate
+      - path: /js/*
+        name: Cache-Control
+        value: public, max-age=3600, must-revalidate
