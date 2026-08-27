@@ -85,6 +85,26 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .wordmark .tag::before, .wordmark .tag::after { content: " \2022  "; color: var(--burgundy); }
 
+/* ---------- Opening soon banner ---------- */
+.opening-banner {
+  background: linear-gradient(90deg, var(--burgundy-2), var(--burgundy) 50%, var(--burgundy-2));
+  border-bottom: 1px solid var(--gold-dim);
+}
+.opening-banner .wrap {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding-top: 9px; padding-bottom: 9px;
+}
+.opening-banner .ob-text {
+  font-family: var(--font-display);
+  font-size: 0.86rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold-hi);
+}
+.opening-banner .ob-mark { color: var(--gold); font-size: 0.78rem; line-height: 1; }
+@media (max-width: 760px) {
+  .opening-banner .ob-text { font-size: 0.72rem; letter-spacing: 0.18em; }
+  .opening-banner .wrap { gap: 10px; }
+}
+
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
